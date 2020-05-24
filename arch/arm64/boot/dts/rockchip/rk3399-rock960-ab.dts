@@ -1172,8 +1172,6 @@
 
 &vopb {
 	status = "okay";
-	assigned-clocks = <&cru DCLK_VOP0_DIV>;
-	assigned-clock-parents = <&cru PLL_VPLL>;
 };
 
 &vopb_mmu {
@@ -1182,8 +1180,6 @@
 
 &vopl {
 	status = "okay";
-	assigned-clocks = <&cru DCLK_VOP1_DIV>;
-	assigned-clock-parents = <&cru PLL_CPLL>;
 };
 
 &vopl_mmu {
@@ -1261,15 +1257,4 @@
 
 &display_subsystem {
 	status = "okay";
-
-	route {
-		route_hdmi: route-hdmi {
-			status = "okay";
-			connect = <&vopb_out_hdmi>;
-		};
-
-		route_dp: route-dp {
-			connect = <&vopl_out_dp>;
-		};
-	};
 };
